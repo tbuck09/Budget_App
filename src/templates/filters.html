@@ -1,0 +1,18 @@
+<div class="input-group date"
+     id="datetimepicker-1"
+     data-target-input="nearest">
+    {{ form.date }}
+    <div class="input-group-append"
+         data-target="#datetimepicker-1"
+         data-toggle="datetimepicker">
+        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $("#datetimepicker-1").datetimepicker({
+            format: "DD/MM/YYYY"
+        });
+    });
+</script>

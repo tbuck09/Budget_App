@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content_var %}
+
+<form action="."
+      method="POST"> {% csrf_token %}
+    <h1>CONTINUE?!</h1>
+    <h3>The following record will be deleted:</h3>
+    <p>{{ object.date }}</p>
+    <p>{{ object.category }}</p>
+    <p>{{ object.amount }}</p>
+    <p>{{ object.description }}</p>
+    <p>{{ object.note }}</p>
+
+    <p><input type='submit'
+               value="Yes" />
+        <a href="../">Cancel</a>
+    </p>
+</form>
+
+{% endblock %}

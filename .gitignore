@@ -1,0 +1,6 @@
+src/db.sqlite3
+**__pycache__
+src/purchases
+src/purchases_csv
+src/templates/purchase
+**migrations

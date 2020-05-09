@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content_var %}
+
+{{ object_list }}
+{% for record in object_list %}
+
+<!-- <p><a href={{ record.get_absolute_list_url }}>{{ record.id }}</a> - {{ record.date }} - {{ record.category }} - -->
+<p><a href={{ record.get_absolute_list_url }}>{{ record.id }}</a> - {{ record.date }} - {{ record.category }} -
+    {% if record.amount < 0 %}
+    Spent: {{ record.amount }}
+    {% else %}
+    Earned: {{ record.amount }}
+    {% endif %}
+</p>
+
+{% endfor %}
+
+{% endblock %}

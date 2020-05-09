@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content_var %}
+<h1>In App Template: {{ object.description }}</h1>
+<p> {{ object.category }}</p>
+{% if object.amount < 0 %}
+<p>Spent: ${{ object.amount }} </p>
+{% else %}
+<p>Earned: ${{ object.amount }} </p>
+{% endif %}
+<p> {{ object.date }} </p>
+<div>
+    <a href="/purchase/{{ object.id }}/update/">Update Item?</a>
+</div>
+<div>
+    <a href="/purchase/{{ object.id }}/delete/">Delete Item?</a>
+</div>
+{% endblock %}

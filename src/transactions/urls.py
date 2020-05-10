@@ -22,6 +22,4 @@ urlpatterns = [
          transaction_delete_view, name='Transaction (Delete)'),
     path('transactions_list_view/', TransactionListClassView.as_view(),
          name="Transaction List View"),
-    #     path('transactions_list_view/<int:year>-<int:month>-<int:day>', TransactionFilteredListClassView.as_view(),
-    #          name="Transaction List View (Filtered)")
 ]

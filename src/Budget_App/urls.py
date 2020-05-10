@@ -16,14 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-from pages.views import home_view, data_entry_view
+from pages.views import home_view, data_entry_view, url_test
 
 
 urlpatterns = [
     # path('purchase/', include('purchases.urls')),
     # path('purchase/', include('purchases_csv.urls')),
     path('t/', include('transactions.urls')),
-
+    path('test_view/<int:year>-<int:month>-<int:day>', url_test,
+         name="Test View"),
     path('', home_view, name='Home'),
     path('admin/', admin.site.urls),
 ]

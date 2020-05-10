@@ -3,7 +3,7 @@ from datetime import datetime as dt
 import pandas as pd
 
 from django.shortcuts import render, get_object_or_404, redirect
-from django.http import Http404
+from django.http import Http404, HttpResponse
 from django.views import View
 from django.contrib import messages
 
